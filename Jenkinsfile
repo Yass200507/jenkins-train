@@ -5,7 +5,7 @@ pipeline{
             steps{
                 script{
                         docker.image('maven').inside('-v $HOME/.m2:/root/.m2') {
-                            sh 'mvn package'
+                            sh 'mvn clean install'
                         }
                 }
             }   
