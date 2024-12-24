@@ -15,7 +15,7 @@ pipeline{
             steps{
                 script{
                     sh "docker build -t firsttrial:0.0 ."
-                    echo "building docker image"
+                    echo "building docker image,"
                 }
             }
         }
