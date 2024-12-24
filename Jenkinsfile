@@ -4,7 +4,7 @@ pipeline{
         stage("build jar file"){
             steps{
                 script{
-                        docker.image('maven').inside('-v $HOME/.m2:/root/.m2') {
+                        docker.image('maven').inside("-v ${env.HOME}/.m2:/root/.m2") {
                             sh 'mvn clean install'
                         }
                         echo "building jar file"
